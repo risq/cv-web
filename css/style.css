@@ -4,8 +4,8 @@
 
 .navbar-brand,
 .navbar-nav li a {
-    line-height: 80px;
-    height: 80px;
+    line-height: 70px;
+    height: 70px;
     padding-top: 0;
 }
 
@@ -22,7 +22,7 @@
     padding: 0;
     list-style: none;
     position: relative;
-    font-size: 1.4em;
+    font-size: 1.1em;
 } 
  
 /* The line */
@@ -76,8 +76,8 @@
     /*width: 25%; */
     padding-right: 100px;
     position: absolute;
-    padding-left: 20px;
-    top:-25px;
+    padding-left: 55px;
+    top:-13px;
 }
 
 .timeline-list > li .timeline-date.mois-et-annee {
@@ -155,6 +155,7 @@
 
 .timeline-list > li .timeline-label p { 
     margin-bottom: 0.4em;
+    font-size: 1em;
 }
 
 /* The triangle */
@@ -255,28 +256,52 @@
 	background: #1ABC9C;
 }
 
+/* Normal size */
 #pf-items .item-container {
 	padding: 4px;
 	width: 25%;
-	height: 300px;
+	height: 250px;
 }
 
+#pf-items .img-container {
+    overflow: hidden;
+    width: 100%;
+    height: 180px;
+}
+
+/* Medium width */
 #pf-items .item-container.mw {
 	width: 50%;
 }
 
+/* Medium height */
 #pf-items .item-container.mh {
-	height: 450px;
+    height: 350px;
 }
 
+#pf-items .mh .img-container {
+    height: 280px;
+}
+
+/* Large height */
 #pf-items .item-container.lh {
-	height: 600px;
+    height: 550px;
 }
 
+#pf-items .lh .img-container {
+    height: 480px;
+}
+
+/* Opened height */
 #pf-items .item-container.opened {
 	width: 100%;
-	height: 700px;
+	height: 550px;
 }
+
+#pf-items .opened .img-container {
+    height: 480px;
+}
+
 
 #pf-items .item {
 	background: #fff;
@@ -297,22 +322,3 @@
 	width: 100%;
 	height: 100%;
 }
-
-#pf-items .img-container {
-	overflow: hidden;
-	width: 100%;
-	height: 200px;
-}
-
-#pf-items .mh .img-container {
-	height: 350px;
-}
-
-#pf-items .lh .img-container {
-	height: 500px;
-}
-
-#pf-items .opened .img-container {
-	height: 600px;
-}
-
