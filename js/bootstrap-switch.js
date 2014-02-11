@@ -218,6 +218,7 @@
       },
       setState: function (value, skipOnChange) {
         $(this).find('input:checkbox').prop('checked', value).trigger('change', skipOnChange);
+        console.log($(this));
       },
       status: function () {
         return $(this).find('input:checkbox').is(':checked');
