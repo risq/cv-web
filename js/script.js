@@ -1,4 +1,10 @@
+var scrollTo = null;
 var lastScrollPos = 0;
+
+var state = 0;  // 0 : waiting
+				// 1 : opening item
+				// 2 : item opened
+				// 3 : closing item
 
 var $pf = $('#pf-items').isotope({
 	itemSelector: '.item-container',
@@ -30,13 +36,17 @@ $( '#pf-items .item-container' ).on( "click", ".item", function(){
 
 
 function openItem(item) {
-	item.parent().addClass('opening').addClass('opened');
-	item.find('img').resizeToParent();
-	$('#pf-items').isotope();	
+	item.parent().addClass('opening');
+	item.fadeOut(200, function(){
+		$(this).parent().addClass('opened');
+		$('#pf-items').isotope();
+		$(this).fadeIn(400).find('img').resizeToParent();
+	})
 }
 
 function closeOpenedItems() {
 	$('.item-container.opened').removeClass('opened').each(function(){
+		$(this).find('.panel-container').animate({right: '-40%'}, 200);
 		$(this).find('img').resizeToParent();
 	});
 	openedItem = null;
@@ -56,12 +66,14 @@ function scrollToItem(item) {
 	$('html, body').animate({
         scrollTop: item.children('.item').offset().top - 78
     }, 400, function(){
-    	item.removeClass('opening');
+    	$("html, body").unbind("scroll mousedown DOMMouseScroll mousewheel keyup");
+    	item.find('.panel-container').animate({right: 0}, 400, function(){
+    		item.removeClass('opening');
+    	});
     });
 }
 
 function scrollToPos(offset) {
-	console.log('hello')
 	$("html, body").bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(){
        $('html, body').stop();
     });
@@ -77,20 +89,24 @@ imagesLoaded( '.img-container', function() {
 });
 
 function pf_filter(){
-	var job 	= $('#job-switch')[0].checked 	 ? '.itemType-job' 	  : null,
-		school 	= $('#school-switch')[0].checked ? '.itemType-school' : null,
-		perso 	= $('#perso-switch')[0].checked  ? '.itemType-perso'  : null;
+	closeOpenedItems();
+	var c_job 	 = $('#job-switch')[0].checked 	  ? '.itemContexte-job'    : null,
+		c_school = $('#school-switch')[0].checked ? '.itemContexte-school' : null,
+		c_perso  = $('#perso-switch')[0].checked  ? '.itemContexte-perso'  : null;
 
-	var values = new Array(job, school, perso).filter(function(n){return n;});
-	if(values.length === 1) {
-		//$('#job-switch').bootstrapSwitch('state');
-	}
-	var type_filter = values.join(',');
-	if (type_filter == "") {
-		console.log('null');
-		
-	}
-	$pf.isotope({ filter: type_filter });
+	var t_web 	= $('#web-switch')[0].checked ? '.itemType-web' : null,
+		t_2d 	= $('#2d-switch')[0].checked  ? '.itemType-2d'  : null,
+		t_3d 	= $('#3d-switch')[0].checked  ? '.itemType-3d'  : null;
+
+	var c_values = new Array(c_job, c_school, c_perso).filter(function(n){return n;}),
+		t_values = new Array(t_web, t_2d, t_3d).filter(function(n){return n;});
+
+	var contexte_filter = c_values.join(','),
+		type_filter 	= t_values.join(',');
+	$pf.isotope({ filter: function() {
+			return $(this).is(contexte_filter) && $(this).is(type_filter);
+		}
+	});
 
 }
 

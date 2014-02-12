@@ -132,10 +132,9 @@
                 <li>
                     <time class="timeline-date mois-et-annee" datetime="1993"><span>Novembre</span><span>1993</span></time>
                     <div class="cbp_empty">
-                        <h3>Né le 9 Novembre 1993</h3>
+                        <h4>Né le 9 Novembre 1993</h4>
                     </div>
                 </li>
-                <li class="timeline-end"></li>
             </ul>
         </div><!-- /.container -->
     </section>
@@ -144,41 +143,73 @@
         <div class="container">
             <div id="pf-controls">
                 <table>
-                    <tr>
-                         <td>
-                            <label class="checkbox" for="perso-switch">
-                                <input type="checkbox" id="perso-switch" class="pf-switch type-switch" checked="checked" data-toggle="checkbox"/>
-                                Projet personel
-                            </label>
-                        </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label class="checkbox" for="job-switch">
-                                <input type="checkbox" id="job-switch" class="pf-switch type-switch" checked="checked" data-toggle="checkbox"/>
-                                Projet professionel
-                            </label>
-                        </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                         <td>
-                            <label class="checkbox" for="school-switch">
-                                <input type="checkbox" id="school-switch" class="pf-switch type-switch" checked="checked" data-toggle="checkbox"/>
-                                Projet scolaire
-                            </label>
-                        </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Contextes des projets</th>
+                            <th colspan="3">Types de projets</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="switch switch-square perso-switch"
+                                    data-on-label="<i class='fa fa-code'></i>"
+                                    data-off-label="<i class='fui-cross'></i>">
+                                    <input type="checkbox" id="perso-switch" class="pf-switch contexte-switch"checked="checked" />
+                                </div>
+                            </td>
+                            <th><label for="perso-switch">Projets personnels</label></th>
+                            <td>
+                                <div class="switch switch-square"
+                                    data-on-label="<i class='fui-check'></i>"
+                                    data-off-label="<i class='fui-cross'></i>">
+                                    <input type="checkbox" id="web-switch" class="pf-switch contexte-switch"checked="checked" />
+                                </div>
+                            </td>
+                            <th><label for="web-switch">Web</label></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="switch switch-square job-switch"
+                                    data-on-label="<i class='fa fa-suitcase'></i>"
+                                    data-off-label="<i class='fui-cross'></i>">
+                                    <input type="checkbox" id="job-switch" class="pf-switch contexte-switch"checked="checked" />
+                                </div>
+                            </td>
+                            <th><label for="job-switch">Projets professionnels</label></th>
+                            <td>
+                                <div class="switch switch-square"
+                                    data-on-label="<i class='fui-check'></i>"
+                                    data-off-label="<i class='fui-cross'></i>">
+                                    <input type="checkbox" id="2d-switch" class="pf-switch contexte-switch"checked="checked" />
+                                </div>
+                            </td>
+                            <th><label for="2d-switch">Infographie 2D</label></th>
+                        </tr>
+                       <tr>
+                            <td>
+                                <div class="switch switch-square school-switch"
+                                    data-on-label="<i class='fa fa-pencil'></i>"
+                                    data-off-label="<i class='fui-cross'></i>">
+                                    <input type="checkbox" id="school-switch" class="pf-switch contexte-switch"checked="checked" />
+                                </div>
+                            </td>
+                            <th><label for="school-switch">Projets scolaires</label></th>
+                            <td>
+                                <div class="switch switch-square"
+                                    data-on-label="<i class='fui-check'></i>"
+                                    data-off-label="<i class='fui-cross'></i>">
+                                    <input type="checkbox" id="3d-switch" class="pf-switch contexte-switch"checked="checked" />
+                                </div>
+                            </td>
+                            <th><label for="3d-switch">Infographie 3D</label></th>
+                        </tr>
+                    </tbody>
                 </table>
                
             </div>
             <div id="pf-items">
-                <div class="item-container itemType-job">
+                <div class="item-container itemContexte-job itemType-web">
                     <div class="item">
                         <div class="item-inner">
                             <div class="img-container">
@@ -190,13 +221,21 @@
                                         </div>
                                     </div>
                                     <div class="panel-inner">
-                                        
+                                        <div class="panel-title">
+                                            Digging Into Hip Hop
+                                        </div>
+                                        <div class="panel-content">
+                                            Digging Into Hip Hop est un blog de découverte musicale de vinyls de Hip Hop, des années 80 et 90. Basé sous Wordpress, il est développé en HTML5/CSS3, PHP et Javascript/JQuery. Une API est développée afin de fournir les informations de chaque vinyl à l'application Web externe "Virtual Digger Experience" (voir dans la liste des projets). 
+                                        </div>
+                                        <div class="panel-toolbar">
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item-title-bar row">
                                 <div class="item-title col-xs-8">
-                                    Titre ti tit titreti titre
+                                    Digging Into Hip Hop
                                 </div>
                                 <div class="item-cat col-xs-4">
                                     Web
@@ -205,7 +244,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item-container mw itemType-perso">
+                <div class="item-container mw itemContexte-perso itemType-3d">
                     <div class="item">
                         <div class="item-inner">
                             <div class="img-container">
@@ -217,22 +256,30 @@
                                         </div>
                                     </div>
                                     <div class="panel-inner">
-                                        
+                                        <div class="panel-title">
+                                            Digging Into Hip Hop
+                                        </div>
+                                        <div class="panel-content">
+                                            Digging Into Hip Hop est un blog de découverte musicale de vinyls de Hip Hop, des années 80 et 90. Basé sous Wordpress, il est développé en HTML5/CSS3, PHP et Javascript/JQuery. Une API est développée afin de fournir les informations de chaque vinyl à l'application Web externe "Virtual Digger Experience" (voir dans la liste des projets). 
+                                        </div>
+                                        <div class="panel-toolbar">
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item-title-bar row">
                                 <div class="item-title col-xs-8">
-                                    Titre ti tit titreti titre
+                                    Digging Into Hip Hop
                                 </div>
                                 <div class="item-cat col-xs-4">
-                                    Web
+                                    3D
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="item-container mw lh itemType-school">
+                <div class="item-container mw lh itemContexte-school itemType-2d">
                     <div class="item">
                         <div class="item-inner">
                             <div class="img-container">
@@ -244,22 +291,30 @@
                                         </div>
                                     </div>
                                     <div class="panel-inner">
-                                        
+                                        <div class="panel-title">
+                                            Digging Into Hip Hop
+                                        </div>
+                                        <div class="panel-content">
+                                            Digging Into Hip Hop est un blog de découverte musicale de vinyls de Hip Hop, des années 80 et 90. Basé sous Wordpress, il est développé en HTML5/CSS3, PHP et Javascript/JQuery. Une API est développée afin de fournir les informations de chaque vinyl à l'application Web externe "Virtual Digger Experience" (voir dans la liste des projets). 
+                                        </div>
+                                        <div class="panel-toolbar">
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item-title-bar row">
                                 <div class="item-title col-xs-8">
-                                    Titre ti tit titreti titre
+                                    Digging Into Hip Hop
                                 </div>
                                 <div class="item-cat col-xs-4">
-                                    Web
+                                    2D
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="item-container mh itemType-job">
+                <div class="item-container mh itemContexte-job itemType-web">
                     <div class="item">
                         <div class="item-inner">
                             <div class="img-container">
@@ -271,13 +326,21 @@
                                         </div>
                                     </div>
                                     <div class="panel-inner">
-                                        
+                                        <div class="panel-title">
+                                            Digging Into Hip Hop
+                                        </div>
+                                        <div class="panel-content">
+                                            Digging Into Hip Hop est un blog de découverte musicale de vinyls de Hip Hop, des années 80 et 90. Basé sous Wordpress, il est développé en HTML5/CSS3, PHP et Javascript/JQuery. Une API est développée afin de fournir les informations de chaque vinyl à l'application Web externe "Virtual Digger Experience" (voir dans la liste des projets). 
+                                        </div>
+                                        <div class="panel-toolbar">
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item-title-bar row">
                                 <div class="item-title col-xs-8">
-                                    Titre ti tit titreti titre
+                                    Digging Into Hip Hop
                                 </div>
                                 <div class="item-cat col-xs-4">
                                     Web
@@ -286,7 +349,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item-container mw itemType-perso">
+                <div class="item-container mw itemContexte-perso itemType-2d">
                     <div class="item">
                         <div class="item-inner">
                             <div class="img-container">
@@ -298,22 +361,30 @@
                                         </div>
                                     </div>
                                     <div class="panel-inner">
-                                        
+                                        <div class="panel-title">
+                                            Digging Into Hip Hop
+                                        </div>
+                                        <div class="panel-content">
+                                            Digging Into Hip Hop est un blog de découverte musicale de vinyls de Hip Hop, des années 80 et 90. Basé sous Wordpress, il est développé en HTML5/CSS3, PHP et Javascript/JQuery. Une API est développée afin de fournir les informations de chaque vinyl à l'application Web externe "Virtual Digger Experience" (voir dans la liste des projets). 
+                                        </div>
+                                        <div class="panel-toolbar">
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item-title-bar row">
                                 <div class="item-title col-xs-8">
-                                    Titre ti tit titreti titre
+                                    Digging Into Hip Hop
                                 </div>
                                 <div class="item-cat col-xs-4">
-                                    Web
+                                    2D
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="item-container mw lh itemType-perso">
+                <div class="item-container mw lh itemContexte-perso itemType-web">
                     <div class="item">
                         <div class="item-inner">
                             <div class="img-container">
@@ -325,13 +396,21 @@
                                         </div>
                                     </div>
                                     <div class="panel-inner">
-                                        
+                                        <div class="panel-title">
+                                            Digging Into Hip Hop
+                                        </div>
+                                        <div class="panel-content">
+                                            Digging Into Hip Hop est un blog de découverte musicale de vinyls de Hip Hop, des années 80 et 90. Basé sous Wordpress, il est développé en HTML5/CSS3, PHP et Javascript/JQuery. Une API est développée afin de fournir les informations de chaque vinyl à l'application Web externe "Virtual Digger Experience" (voir dans la liste des projets). 
+                                        </div>
+                                        <div class="panel-toolbar">
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item-title-bar row">
                                 <div class="item-title col-xs-8">
-                                    Titre ti tit titreti titre
+                                    Digging Into Hip Hop
                                 </div>
                                 <div class="item-cat col-xs-4">
                                     Web
@@ -340,7 +419,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item-container mw itemType-perso">
+                <div class="item-container mw itemContexte-perso itemType-3d">
                     <div class="item">
                         <div class="item-inner">
                             <div class="img-container">
@@ -352,22 +431,30 @@
                                         </div>
                                     </div>
                                     <div class="panel-inner">
-                                        
+                                        <div class="panel-title">
+                                            Digging Into Hip Hop
+                                        </div>
+                                        <div class="panel-content">
+                                            Digging Into Hip Hop est un blog de découverte musicale de vinyls de Hip Hop, des années 80 et 90. Basé sous Wordpress, il est développé en HTML5/CSS3, PHP et Javascript/JQuery. Une API est développée afin de fournir les informations de chaque vinyl à l'application Web externe "Virtual Digger Experience" (voir dans la liste des projets). 
+                                        </div>
+                                        <div class="panel-toolbar">
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item-title-bar row">
                                 <div class="item-title col-xs-8">
-                                    Titre ti tit titreti titre
+                                    Digging Into Hip Hop
                                 </div>
                                 <div class="item-cat col-xs-4">
-                                    Web
+                                    3D
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="item-container itemType-school">
+                <div class="item-container itemContexte-school itemType-web">
                     <div class="item">
                         <div class="item-inner">
                             <div class="img-container">
@@ -379,13 +466,21 @@
                                         </div>
                                     </div>
                                     <div class="panel-inner">
-                                        
+                                        <div class="panel-title">
+                                            Digging Into Hip Hop
+                                        </div>
+                                        <div class="panel-content">
+                                            Digging Into Hip Hop est un blog de découverte musicale de vinyls de Hip Hop, des années 80 et 90. Basé sous Wordpress, il est développé en HTML5/CSS3, PHP et Javascript/JQuery. Une API est développée afin de fournir les informations de chaque vinyl à l'application Web externe "Virtual Digger Experience" (voir dans la liste des projets). 
+                                        </div>
+                                        <div class="panel-toolbar">
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item-title-bar row">
                                 <div class="item-title col-xs-8">
-                                    Titre ti tit titreti titre
+                                    Digging Into Hip Hop
                                 </div>
                                 <div class="item-cat col-xs-4">
                                     Web
@@ -394,7 +489,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item-container mh itemType-perso">
+                <div class="item-container mh itemContexte-perso itemType-3d">
                     <div class="item">
                         <div class="item-inner">
                             <div class="img-container">
@@ -406,16 +501,24 @@
                                         </div>
                                     </div>
                                     <div class="panel-inner">
-                                        
+                                        <div class="panel-title">
+                                            Digging Into Hip Hop
+                                        </div>
+                                        <div class="panel-content">
+                                            Digging Into Hip Hop est un blog de découverte musicale de vinyls de Hip Hop, des années 80 et 90. Basé sous Wordpress, il est développé en HTML5/CSS3, PHP et Javascript/JQuery. Une API est développée afin de fournir les informations de chaque vinyl à l'application Web externe "Virtual Digger Experience" (voir dans la liste des projets). 
+                                        </div>
+                                        <div class="panel-toolbar">
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item-title-bar row">
                                 <div class="item-title col-xs-8">
-                                    Titre ti tit titreti titre
+                                    Digging Into Hip Hop
                                 </div>
                                 <div class="item-cat col-xs-4">
-                                    Web
+                                    3D
                                 </div>
                             </div>
                         </div>
@@ -431,7 +534,7 @@
     <!-- <script src="js/jquery.ui.touch-punch.min.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
     <!-- <script src="js/bootstrap-select.js"></script> -->
-    <!-- <script src="js/bootstrap-switch.js"></script> -->
+    <script src="js/bootstrap-switch.js"></script>
     <script src="js/flatui-checkbox.js"></script>
     <script src="js/flatui-radio.js"></script>
     <!-- <script src="js/jquery.tagsinput.js"></script> -->

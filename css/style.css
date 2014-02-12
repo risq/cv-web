@@ -113,7 +113,7 @@
 
 /* Right content */
 .timeline-list > li .cbp_empty {
-    margin: 0 0 50px 25%;
+    margin: 0 0 0 30%;
 	height: 100px;
     position: relative;
 }
@@ -257,15 +257,65 @@
 }
 
 #pf-controls {
+    margin: 4px 4px 24px;
     background: #E5E9EA;
     padding: 16px 16px 8px 16px;
-    margin-bottom: 24px;
-    line-height: 29px;
 }
 
-#pf-controls table th{
-    padding-right: 8px;
+#pf-controls table {
+    width: 100%;
+}
+
+#pf-controls table thead th {
+    padding-bottom: 16px;
+    text-align: center;
+}
+
+#pf-controls table td {
+    text-align: right;
+    padding-right: 16px; 
+}
+
+#pf-controls table th {
     text-align: left;
+}
+
+#pf-controls table th label {
+    margin-bottom: 7px;
+}
+
+
+/* SWITCH STYLE */
+#pf-controls .perso-switch .switch-left,
+#pf-controls .job-switch .switch-left,
+#pf-controls .school-switch .switch-left {
+    background-color: #BDC3C7;
+}
+
+#pf-controls .switch i.fa {
+    font-size: 22px;
+    line-height: 19px;
+    margin-left: -9px;
+}
+
+/* perso */
+#pf-controls .perso-switch.has-switch > div.switch-on label {
+    background: #E74C3C;
+    border-color: #E74C3C;
+}
+
+#pf-controls .perso-switch.has-switch i.fa {
+    color: #E74C3C;
+}
+
+/* job */
+#pf-controls .job-switch.has-switch > div.switch-on label {
+    background: #34495E;
+    border-color: #34495E;
+}
+
+#pf-controls .job-switch.has-switch i.fa {
+    color: #34495E;
 }
 
 /* Normal size */
@@ -358,6 +408,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    font-size: 1.1em;
 }
 
 #pf-items .item-cat {
@@ -379,16 +430,10 @@
 #pf-items .panel-container {
     position: absolute;
     width: 40%;
-    max-width: 372px;
+    max-width: 420px;
     height: 100%;
     top: 0;
     right: -40%;
-    -webkit-transition: right .3s ease-in-out;
-    transition: right .3s ease-in-out;
-}
-
-#pf-items .opened .panel-container {
-    right: 0;   
 }
 
 #pf-items .panel-inner {
@@ -396,8 +441,22 @@
     height: 100%;
     z-index: 500;
     background: #fff;
+    padding: 6px 16px;
     -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
     transition: border .25s linear, color .25s linear, background-color .25s linear;
+}
+
+#pf-items .panel-title {
+    text-align: center;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+#pf-items .panel-content {
+    text-align: justify;
+    font-size: .9em;
+    padding: 8px; 
 }
 
 #pf-items .item-type {
