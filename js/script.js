@@ -103,7 +103,8 @@ function pf_filter(){
 
 	var contexte_filter = c_values.join(','),
 		type_filter 	= t_values.join(',');
-	$pf.isotope({ filter: function() {
+	$pf.isotope({ 
+		filter: function() {
 			return $(this).is(contexte_filter) && $(this).is(type_filter);
 		}
 	});
