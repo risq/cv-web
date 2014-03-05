@@ -40,14 +40,13 @@ function openItem(item) {
 	item.fadeOut(200, function(){
 		$(this).parent().addClass('opened');
 		$('#pf-items').isotope();
-		$(this).fadeIn(400).find('img').resizeToParent();
+		$(this).fadeIn(400);
 	})
 }
 
 function closeOpenedItems() {
 	$('.item-container.opened').removeClass('opened').each(function(){
 		$(this).find('.panel-container').animate({right: '-40%'}, 200);
-		$(this).find('img').resizeToParent();
 	});
 	openedItem = null;
 }
@@ -83,10 +82,6 @@ function scrollToPos(offset) {
     	$("html, body").unbind("scroll mousedown DOMMouseScroll mousewheel keyup");
     });
 }
-
-imagesLoaded( '.img-container', function() {
-	$('.img-container img').resizeToParent();
-});
 
 function pf_filter(){
 	closeOpenedItems();
