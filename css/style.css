@@ -9,9 +9,56 @@
     padding-top: 0;
 }
 
+section {
+    background-color: #fff;
+    padding-top: 60px;
+    border-bottom: 4px solid #E74C3C;
+}
+
+.title {
+    width: 100%;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+    font-size: 140px;
+    color: #fff;
+    font-weight: 400;
+    background-color: rgba(0,0,0,0.3);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 /*********************************************************************************/
-/* Timeline                                                                          */
+/* Intro                                                                      */
+/*********************************************************************************/
+#intro {
+    text-align: center;
+}
+
+#intro .arrow {
+    margin: 60px 0;
+}
+
+.acces-parts {
+    margin: 40px 0 100px 0;
+}
+
+.acces-parts .select-parts {
+    margin: 20px 0;
+}
+
+.acces-parts .select-parts .btn {
+    font-size: 20px;
+}
+
+
+
+/*********************************************************************************/
+/* Timeline                                                                      */
 /*********************************************************************************/
 .toolbar {
 	text-align: center;
@@ -32,7 +79,7 @@
     top: 10px;
     bottom: 0;
     width: 10px;
-    background: #2f4154;
+    background: #111111;
     left: 200px;
     margin-left: -10px;
 }
@@ -45,14 +92,14 @@
     height: 60px;
     left: 200px;
     margin-left: -10px;
-    background: #2f4154; /* Old browsers */
-	background: -moz-linear-gradient(top, #2f4154 0%, #f8fcfc 83%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2f4154), color-stop(83%,#f8fcfc)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #2f4154 0%,#f8fcfc 83%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #2f4154 0%,#f8fcfc 83%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #2f4154 0%,#f8fcfc 83%); /* IE10+ */
-	background: linear-gradient(to bottom, #2f4154 0%,#f8fcfc 83%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f4154', endColorstr='#f8fcfc',GradientType=0 ); /* IE6-9 */
+    background: #111111; /* Old browsers */
+	background: -moz-linear-gradient(top, #111111 0%, #f8fcfc 83%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#111111), color-stop(83%,#f8fcfc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #111111 0%,#f8fcfc 83%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #111111 0%,#f8fcfc 83%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #111111 0%,#f8fcfc 83%); /* IE10+ */
+	background: linear-gradient(to bottom, #111111 0%,#f8fcfc 83%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#111111', endColorstr='#f8fcfc',GradientType=0 ); /* IE6-9 */
 
 }
 
@@ -66,7 +113,7 @@
 }
 
 .timeline-list > li a:hover {
-    color: #2f4154;
+    color: #111111;
     border-bottom: 1px dotted rgba(255, 255, 255, 0);
 }
  
@@ -91,12 +138,12 @@
  
 .timeline-list > li .timeline-date span:first-child {
     font-size: 0.9em;
-    color: #2f4154;
+    color: #111111;
 }
  
 .timeline-list > li .timeline-date span:last-child {
     font-size: 2em;
-    color: #2f4154;
+    color: #111111;
 }
 
 .timeline-list > li.etude-item .timeline-date span:last-child {
@@ -199,7 +246,7 @@
     position: absolute;
     color: #fff;
     border-radius: 50%;
-    box-shadow: 0 0 0 8px #2f4154;
+    box-shadow: 0 0 0 8px #111111;
     text-align: center;
     left: 200px;
     top: 0;
@@ -230,6 +277,7 @@
 
 	.timeline-list > li .timeline-date {
 	    padding-right: 80px;
+        padding-left: 0;
 	}
 	
 	.timeline-list > li .timeline-label {
@@ -243,6 +291,18 @@
 	.timeline-list > li .timeline-date.mois-et-annee {
 		top: -16px;
 	}
+
+    .timeline-list > li .timeline-icon {
+        left: 100px;
+    }
+
+    .timeline-list > li .timeline-label {
+        margin-left: 150px;
+    }
+
+    .timeline-list:before {
+        left: 100px;
+    }
 }
 
 
@@ -253,7 +313,6 @@
 
 #portfolio {
 	padding: 5em 0;
-	background: #1ABC9C;
 }
 
 #pf-controls {
@@ -371,7 +430,7 @@
 
 #pf-items .item {
     cursor: pointer;
-	background: #fff;
+	background: #ECF0F1;
     position: relative;
 	width: 100%;
 	height: 100%;
@@ -382,15 +441,15 @@
 }
 
 #pf-items .item:hover {
-    background: #ECF0F1;
+    background: #dfe5e7;
 }
 
 #pf-items .item:hover .item-type {
-    background: #ECF0F1;
+    background: #dfe5e7;
 }
 
 #pf-items .item:hover .panel-inner {
-    background: #ECF0F1;
+    background: #dfe5e7;
 }
 
 #pf-items .item-title-bar {
@@ -441,7 +500,7 @@
     width: 100%;
     height: 100%;
     z-index: 500;
-    background: #fff;
+    background: #ECF0F1;
     padding: 6px 16px;
     -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
     transition: border .25s linear, color .25s linear, background-color .25s linear;
